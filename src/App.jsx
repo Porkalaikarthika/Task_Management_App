@@ -21,19 +21,30 @@ function App() {
     <h1>Task Management App</h1>
     <label>
     <input type='text'
-    value={title}
+    name='title'
+     //value={title}
     onChange={e=>setTitle(e.target.value)}
     />
-    <input type="text" value={des}
+    <input type="text" 
+    //value={des}
+    name='description'
     onChange={e=>setDes(e.target.value)}/>
-    <button onClick={()=>add(title,des)}>Add</button>
+    <button onClick={()=>
+      {
+        add(title,des);
+        setTitle('');
+        setDes('');
+        }
+        }>Add</button>
     </label>
     <ul>
     {task.map(artist => (
       <>
           <li key={artist.Id}><b>Title:</b>{artist.Title}{""}
           Description:{artist.Des}</li>
-          <button>edit</button>
+          <button onClick={(()=>{
+            edit(artist.Id,artist.Title,artist.Des)
+          })}>edit</button>
           <button>delete</button>
           </>
         ))}
