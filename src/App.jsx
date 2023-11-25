@@ -40,7 +40,7 @@ function App() {
     <ul>
     {task.map(artist => (
       <>
-          <li key={artist.Id}><b>Title:</b>{artist.Title}{""}
+          <li key={artist.Id}><b>Title:</b>{artist.Id}{artist.Title}{""}
           Description:{artist.Des}</li>
           <button onClick={(()=>{
             edit(artist.Id,artist.Title,artist.Des)
