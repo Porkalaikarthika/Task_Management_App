@@ -1,5 +1,5 @@
 import { useState } from "react";
-export default function Addtodo(){
+export default function Addtodo({handleClick}){
 
     const [task,setTask]=useState({
         Title:"",Des:""
@@ -28,7 +28,7 @@ export default function Addtodo(){
         value={task.Des}
         onChange={handleChange}/>
       </label><br /><br />
-      
+      <button onClick={()=>handleClick(task.Title,task.Des)}>Add</button>
       <span><b>Title:</b> {task.Title}</span>
       <span>       <b>Description:</b>{task.Des}</span>
         </>
