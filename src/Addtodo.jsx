@@ -1,18 +1,9 @@
 import { useState } from "react";
-export default function Addtodo({handleClick}){
+export default function Addtodo({handleClick,handleChange,task,handleClear}){
 
-    const [task,setTask]=useState({
-        Title:"",Des:""
-      })
-      function handleChange(e){
-        const {name,value}=e.target
-        setTask(pretask=>{
-         return ({...pretask,[name]:value})
-        })
-        
-     }
       return(
-        <><label>
+        <>
+        <label>
         <input 
         type="text" 
         name="Title"
@@ -22,15 +13,14 @@ export default function Addtodo({handleClick}){
         />
       </label>
       <label>
-        <input type="text" 
+      <input type="text" 
         name="Des"
         placeholder='Enter description'
         value={task.Des}
         onChange={handleChange}/>
       </label><br /><br />
-      <button onClick={()=>handleClick(task.Title,task.Des)}>Add</button>
-      <span><b>Title:</b> {task.Title}</span>
-      <span>       <b>Description:</b>{task.Des}</span>
-        </>
+      <button onClick={()=>{handleClear();
+      handleClick(task.Title,task.Des);}}>Add</button>      
+      </>
       )
 }
