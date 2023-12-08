@@ -49,6 +49,11 @@ function handleTask(e, id) {
     )
   );
 }
+// const handleInputChange = (e) => {
+//   const { name, value } = e.target;
+//   setEditedTask((prev) => ({ ...prev, [name]: value }));
+// };
+
 
  function handleDelete(id){
   setTasklist((tasks)=>tasks.filter((task)=>id!==task.id))
