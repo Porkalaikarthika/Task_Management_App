@@ -3,37 +3,6 @@ export default function Display({ tasklist, handleDelete, handleTask }) {
   const [edit, setEdit] = useState(null)
 
 
-  function HandleEdit({ currentTask }) {
-
-
-    return (
-
-      <>
-        <input
-          type="text"
-          name="Title"
-          value={currentTask.Title}
-          onChange={(e) => handleTask(e, currentTask.id)}
-        />
-        <input
-          type="text"
-          name="Des"
-          value={currentTask.Des}
-          onChange={(e) => handleTask(e, currentTask.id)}
-        />
-        <button
-          onClick={() => {
-            setEdit(null);
-          }}
-        >
-          Save
-        </button>
-      </>
-    );
-
-
-
-  }
 
 
   return (<>
@@ -43,7 +12,27 @@ export default function Display({ tasklist, handleDelete, handleTask }) {
           onChange={(e) => handleTask(e, task.id)} />
 
 
-        {edit === task.id ? (<HandleEdit currentTask={task} />) : (<>
+        {edit === task.id ? <>
+          <input
+            type="text"
+            name="Title"
+            value={task.Title}
+            onChange={(e) => handleTask(e, task.id)}
+          />
+          <input
+            type="text"
+            name="Des"
+            value={task.Des}
+            onChange={(e) => handleTask(e, task.id)}
+          />
+          <button
+            onClick={() => {
+              setEdit(null);
+            }}
+          >
+            Save
+          </button>
+        </> : (<>
           <span><b>Title:</b>{task.Title} </span>
           {task.Des && <span><b>Description:</b> {task.Des}</span>}
           <button onClick={() => setEdit(task.id)}>Edit</button>
