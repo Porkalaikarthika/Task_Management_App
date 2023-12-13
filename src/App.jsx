@@ -5,9 +5,9 @@ import Display from './Display'
 
 export default function App() {
   const [tasklist, setTasklist] = useState([
-    { id: 145, Title: "read a book", Des: "daily read 10 pages on the book", done: true },
-    { id: 235, Title: "read a book", Des: "daily read 10 pages on the book", done: true },
-    { id: 334, Title: "read a book", Des: "daily read 10 pages on the book", done: true }])
+    { id: 145, Title: "read a book", Des: "daily read 10 pages on the book", done: false },
+    { id: 235, Title: "read a book", Des: "daily read 10 pages on the book", done: false },
+    { id: 334, Title: "read a book", Des: "daily read 10 pages on the book", done: false }])
 
 
   const [task, setTask] = useState({

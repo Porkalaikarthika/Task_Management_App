@@ -4,7 +4,7 @@ export default function Addtodo({handleClick,handleChange,task,handleClear}){
       return(
         <>
         <label>
-        <input 
+        <input className="addItem"
         type="text" 
         name="Title"
         placeholder='Enter title'
@@ -13,13 +13,14 @@ export default function Addtodo({handleClick,handleChange,task,handleClear}){
         />
       </label>
       <label>
-      <input type="text" 
+      <input className="addItem"
+      type="text" 
         name="Des"
         placeholder='Enter description'
         value={task.Des}
         onChange={handleChange}/>
       </label><br /><br />
-      <button onClick={()=>{handleClear();
+      <button  onClick={()=>{handleClear();
       handleClick(task.Title,task.Des);}}>Add</button>      
       </>
       )

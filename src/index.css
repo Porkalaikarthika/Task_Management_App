@@ -29,11 +29,46 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(to right, rgba(255, 140, 0, 0.8), rgba(255, 0, 128, 0.6))
+
+  
+  
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+li{
+   list-style: none;
+}
+
+.addItem input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+
+.task-item {
+  background: rgba(251, 249, 249, 0.4);
+  
+  border-radius: 0.3rem;
+  display: flex;
+ margin-bottom: 0.5rem;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  color: rgb(133, 18, 10);
+  
+}
+.task-item.checked {
+  background-color: rgba(255, 100, 60, 0.8);
+  /* background: rgba(251, 249, 249, 0.8); */
+  color: #151515;
+
 }
 
 button {
@@ -56,6 +91,7 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -68,3 +104,85 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+/* body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Rounded edges for the task bar */
+  /* margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: s;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #f9f9f9;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+li input[type="checkbox"]:checked ~ span {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+li button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+li button.edit {
+  background-color: #3498db;
+  margin-right: 5px;
+}
+
+.add-task {
+  margin-top: 20px;
+}
+
+.add-task input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 4px; /* Rounded edges for the input */
+/* }
+
+.add-task button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+} */ 
