@@ -5,9 +5,9 @@ import Display from './Display'
 
 export default function App() {
   const [tasklist, setTasklist] = useState([
-    { id: 145, Title: "read a book", Des: "daily read 10 pages on the book", done: false },
-    { id: 235, Title: "read a book", Des: "daily read 10 pages on the book", done: false },
-    { id: 334, Title: "read a book", Des: "daily read 10 pages on the book", done: false }])
+    { id: 145, Title: "Read a book", Des: "Daily read 10 pages on the book", done: false },
+    { id: 235, Title: "Do exercise", Des: "20 minutes of physical activity", done: false },
+    { id: 334, Title: "Pranayama", Des: "Do meditation and pranayama", done: false }])
 
 
   const [task, setTask] = useState({
@@ -44,14 +44,10 @@ export default function App() {
     );
   }
 
-
   function handleDelete(id) {
     setTasklist((tasks) => tasks.filter((task) => id !== task.id))
     console.log(tasklist)
   }
-
-
-
 
   return (
     <>
