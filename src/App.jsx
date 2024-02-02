@@ -7,7 +7,7 @@ export default function App() {
   const [tasklist, setTasklist] = useState([
     { id: 145, Title: "Read a book", Des: "Daily read 10 pages on the book", done: false },
     { id: 235, Title: "Do exercise", Des: "20 minutes of physical activity", done: false },
-    { id: 334, Title: "Yoga", Des: "Suriyanamaskar", done: false }])
+    { id: 334, Title: "Shop", Des: "Grocery", done: false }])
 
 
   const [task, setTask] = useState({
